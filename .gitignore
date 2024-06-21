@@ -1,0 +1,7 @@
+# Ignore db directory created after docker compose up
+docker/db/
+
+# Ignore unnecessary files
+.DS_Store
+.idea/
+src/storage/
