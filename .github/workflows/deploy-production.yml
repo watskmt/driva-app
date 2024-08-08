@@ -11,6 +11,8 @@ jobs:
       - name: Checkout repsitory
         uses: actions/checkout@v3
 
+      - run: git branch
+      - run: ls -al
       - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
