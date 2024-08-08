@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: npm install /home/runner/work/driva-app/driva-app/driva-app
 
-      - run: cd /home/runner/work/driva-app/driva-app/driva-app
+      - run: ls -la /home/runner/work/driva-app/driva-app/driva-app
 
       - name: build
         run: npm run build
