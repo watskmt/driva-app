@@ -10,6 +10,11 @@ jobs:
       - uses: actions/checkout@v3
       - name: Print working directory
         run: pwd
+      - name: Set working directory
+        run: |
+          cd /home/runner/work/driva-app/driva-app
+      - name: Print working directory
+        run: pwd
       - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
