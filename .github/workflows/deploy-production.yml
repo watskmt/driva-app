@@ -34,8 +34,9 @@ jobs:
 
       - run: cd /home/runner/work/driva-app/driva-app/driva-app
 
+      - run: pwd
+
       - uses: FirebaseExtended/action-hosting-deploy@v0
-        working-directory: driva-app
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DRIVA_TEST_6BA52 }}'
