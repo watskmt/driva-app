@@ -27,7 +27,7 @@ jobs:
         run: npm install /home/runner/work/driva-app/driva-app/driva-app
 
       - name: build
-        run: npm run build
+        run: npm run build /home/runner/work/driva-app/driva-app/driva-app
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
