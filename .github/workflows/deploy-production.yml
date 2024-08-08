@@ -34,7 +34,7 @@ jobs:
 
       - run: cd /home/runner/work/driva-app/driva-app/driva-app
 
-      - run: pwd
+      - run: cat /home/runner/work/driva-app/driva-app/driva-app/firebase.json
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
