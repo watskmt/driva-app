@@ -7,7 +7,8 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repsitory
+        uses: actions/checkout@v3
       - name: Print working directory
         run: pwd
       - name: Set working directory
