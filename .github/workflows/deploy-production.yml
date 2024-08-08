@@ -29,7 +29,7 @@ jobs:
       - run: cat /home/runner/work/driva-app/driva-app/driva-app/package.json
 
       - name: build
-        run: npm run build
+        run: tsc -b && vite build
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
