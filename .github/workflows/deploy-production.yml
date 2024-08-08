@@ -7,7 +7,7 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: Print working directory
         run: pwd
       - name: Set working directory
@@ -28,3 +28,5 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SAMPLE_APP_12BF5 }}'
           channelId: live
           projectId: driva-test-6ba52
+      - name: List directory contents
+        run: ls -R
