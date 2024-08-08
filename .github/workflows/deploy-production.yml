@@ -10,10 +10,6 @@ jobs:
       run:
         working-directory: ../
     steps:
-      - name: Add SSH key to chekout a private repo
-        uses: webfactory/ssh-agent@v0.5.4
-        with:
-          ssh-private-key: ${{ secrets.REPO_SSH_KEY }}
       - uses: actions/checkout@v3
       - name: Use Node.js 16
         uses: actions/setup-node@v3
