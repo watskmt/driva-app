@@ -13,6 +13,10 @@ jobs:
 
       - run: git branch
       - run: ls -al
+      - run: pwd
+      - run: ls -la /home/runner/work/driva-app
+      - run: ls -la /home/runner/work/driva-app/driva-app
+
       - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
