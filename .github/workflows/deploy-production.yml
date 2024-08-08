@@ -1,12 +1,10 @@
-name: Deploy to Firebase Hosting on PR
-on: pull_request
-permissions:
-  checks: write
-  contents: read
-  pull-requests: write
+name: Deploy to Firebase Hosting on merge
+'on':
+  push:
+    branches:
+      - main
 jobs:
-  build_and_preview:
-    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,12 +12,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: lint and testS
+      - name: lint and test
         run: |
-          npm install
-          npm run lint
-          npm run test
+           npm install
+           npm run lint
+      - run: npm run build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DRIVA_TEST_6BA52 }}
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SAMPLE_APP_12BF5 }}'
+          channelId: live
           projectId: driva-test-6ba52
