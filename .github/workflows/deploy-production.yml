@@ -43,5 +43,6 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DRIVA_TEST_6BA52 }}'
           channelId: live
           projectId: driva-test-6ba52
+          entryPoint: "driva-app" # ここを追加
       - name: List directory contents
         run: ls -R
