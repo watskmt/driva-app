@@ -16,6 +16,7 @@ jobs:
       - run: pwd
       - run: ls -la /home/runner/work/driva-app
       - run: ls -la /home/runner/work/driva-app/driva-app
+      - run: cd /home/runner/work/driva-app/driva-app/driva-app
 
       - name: Use Node.js 16
         uses: actions/setup-node@v3
