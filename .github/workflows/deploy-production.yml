@@ -33,6 +33,7 @@ jobs:
         working-directory: driva-app
 
       - run: cd /home/runner/work/driva-app/driva-app/driva-app
+      - run: pwd
 
       - run: cat /home/runner/work/driva-app/driva-app/driva-app/firebase.json
 
