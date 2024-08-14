@@ -17,9 +17,9 @@ import './index.css'
 // // @ts-ignore
 // const app = initializeApp(firebaseConfig);
 
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
+
   </StrictMode>,
 )

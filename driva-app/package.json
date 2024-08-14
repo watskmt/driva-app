@@ -13,6 +13,11 @@
     "test": "firebase emulators:exec --only firestore 'vitest run'"
   },
   "dependencies": {
+    "@firebase/app": "^0.10.8",
+    "@firebase/auth": "^1.7.6",
+    "@firebase/firestore": "^4.6.5",
+    "@firebase/functions": "^0.11.6",
+    "@firebase/storage": "^0.12.6",
     "@reduxjs/toolkit": "^2.2.7",
     "firebase": "^10.12.5",
     "react": "^18.3.1",
@@ -35,14 +40,14 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "eslint": "^9.8.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "eslint-plugin-storybook": "^0.8.0",
     "globals": "^15.9.0",
     "storybook": "^8.2.8",
-    "typescript": "^5.5.3",
+    "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.0",
     "vitest": "^2.0.5"
