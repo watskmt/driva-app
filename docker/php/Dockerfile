@@ -12,6 +12,8 @@ RUN apt-get update \
   && apt-get install -y zlib1g-dev mariadb-client vim libzip-dev unzip \
   && docker-php-ext-install zip pdo_mysql
 
+RUN pecl install xdebug && docker-php-ext-enable xdebug
+
 #Composer install
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php

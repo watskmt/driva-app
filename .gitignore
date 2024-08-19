@@ -5,3 +5,4 @@ docker/db/
 .DS_Store
 .idea/
 src/storage/
+ui/

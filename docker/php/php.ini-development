@@ -924,16 +924,16 @@ default_socket_timeout = 60
 ; See https://github.com/php/php-src/issues/8620 for more info.
 ;extension=ldap
 
-extension=curl
+;extension=curl
 ;extension=ffi
 ;extension=ftp
 ;extension=fileinfo
 ;extension=gd
 ;extension=gettext
 ;extension=gmp
-extension=intl
+;extension=intl
 ;extension=imap
-extension=mbstring
+;extension=mbstring
 ;extension=exif      ; Must be after mbstring as it depends on it
 ;extension=mysqli
 ;extension=oci8_12c  ; Use with Oracle Database 12c Instant Client
@@ -959,7 +959,7 @@ extension=mbstring
 ;extension=sqlite3
 ;extension=tidy
 ;extension=xsl
-extension=zip
+;extension=zip
 
 ;zend_extension=opcache
 
@@ -1970,22 +1970,3 @@ ldap.max_links = -1
 
 ; List of headers files to preload, wildcard patterns allowed.
 ;ffi.preload=
-
-[Date]
-date.timezone = "Asia/Tokyo"
-[opcache]
-opcache.memory_consumption=128
-opcache.interned_strings_buffer=8
-opcache.max_accelerated_files=4000
-opcache.revalidate_freq=60
-opcache.fast_shutdown=1
-opcache.enable_cli=1
-[xdebug]
-xdebug.mode = debug,develop
-xdebug.client_host = host.docker.internal
-xdebug.client_port = 9003
-xdebug.start_with_request = yes
-xdebug.idekey = PHPSTORM
-xdebug.log = /tmp/xdebug.log
-; cli実行時にwarningを出さないため
-xdebug.log_level=0
